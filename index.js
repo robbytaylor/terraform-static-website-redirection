@@ -2,7 +2,7 @@ exports.handler = (event, context, callback) => {
     const request = event.Records[0].cf.request;
     const hostname = request.headers.host[0].value;
 
-    if (hostname === "${primary_hostname}") {
+    if ("${primary_hostname}" && hostname === "${primary_hostname}") {
         return callback(null, request);
     }
 
