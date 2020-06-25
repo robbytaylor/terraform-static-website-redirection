@@ -3,7 +3,7 @@ data template_file lambda {
   template = "${file("${path.module}/index.js")}"
 
   vars = {
-    primary_hostname = var.redirect_all ? "" : var.cloudfront_distribution
+    redirect_to = var.redirect_to ? var.redirect_to : var.cloudfront_distribution
   }
 }
 

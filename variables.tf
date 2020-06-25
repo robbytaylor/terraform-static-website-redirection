@@ -58,8 +58,8 @@ variable lambda_function_name {
   description = "The name of the Lambda@Edge function for redirecting to the primary hostname"
 }
 
-variable redirect_all {
-  type        = bool
-  default     = false
-  description = "Whether all requests should be redirected, or just ones which don't match the CloudFront distribution primary host"
+variable redirect_to {
+  type        = string
+  default     = ""
+  description = "Where to redirect requests to, if not set the cloudfront distribution host will be used"
 }
