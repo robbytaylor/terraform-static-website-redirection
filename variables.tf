@@ -60,6 +60,6 @@ variable lambda_function_name {
 
 variable redirect_all {
   type        = bool
-  defualt     = false
+  default     = false
   description = "Whether all requests should be redirected, or just ones which don't match the CloudFront distribution primary host"
 }
