@@ -1,6 +1,6 @@
 data template_file lambda {
   count    = length(var.cloudfront_aliases) > 0 ? 1 : 0
-  template = "${file("${path.module}/index.js")}"
+  template = file("${path.module}/index.js")
 
   vars = {
     redirect_to = var.redirect_to != "" ? var.redirect_to : var.cloudfront_distribution
